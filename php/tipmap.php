@@ -12,8 +12,10 @@
 
     //need one for sql insertion
     if (isset($_GET["add"])) {
-        //SANITIZE YOUR INPUTS FOOL
-        $query = "INSERT INTO us_tip_data (latitude, longitude, tip) VALUES (" . $_GET["latitude"] . ", " . $_GET["longitude"] . ", " . $_GET["tip"] . ")";
+        $latitude = mysqli_real_escape_string($_GET["latitude"]);
+        $longitude = mysqli_real_escape_string($_GET["longitude"]);
+        $tip = mysqli_real_escape_string($_GET["tip"]);
+        $query = "INSERT INTO us_tip_data (latitude, longitude, tip) VALUES (" . $latitude . ", " . $longitude . ", " . $tip . ")";
         
         if ($conn->query($query)) {
             echo "Added to tip map!";
