@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script src="js/goog/base.js"></script>
+        <script src="js/cljs.js"></script>
+        <script type="text/javascript">goog.require("tip_map.core");</script>
+
+        <div id="nav">
+            <a href="#" id="input_nav">Add a tip</a> | <a href="#" id="chart_nav">View the map</a>
+        </div>
+        <div id="input">
+            <span id="out"></span><br />
+            Ticket Total:<br /> <input type="text" id="total" /><br />
+            Amount Collected:<br /> <input type="text" id="collected" /><br /><br />
+            <input type="button" value="Add tip at this location" id="btn" />
+        </div>
+        <div id="chart" style="display: none"></div>
+    </body>
+
+</html>
