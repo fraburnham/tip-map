@@ -12,9 +12,9 @@
 
     //need one for sql insertion
     if (isset($_GET["add"])) {
-        $latitude = mysqli_real_escape_string($conn, $_GET["latitude"]);
-        $longitude = mysqli_real_escape_string($conn, $_GET["longitude"]);
-        $tip = mysqli_real_escape_string($conn, $_GET["tip"]);
+        $latitude = mysqli_real_escape_string($_GET["latitude"]);
+        $longitude = mysqli_real_escape_string($_GET["longitude"]);
+        $tip = mysqli_real_escape_string($_GET["tip"]);
         $query = "INSERT INTO us_tip_data (latitude, longitude, tip) VALUES (" . $latitude . ", " . $longitude . ", " . $tip . ")";
         
         if ($conn->query($query)) {
